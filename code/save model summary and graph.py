@@ -30,7 +30,8 @@ plot_model(conv_base, to_file=f'../InceptionResNetV2 graph {dpi}dpi.pdf', show_s
 # is easiet ux when opening in gui)
 dot = model_to_dot(conv_base, show_shapes=True, expand_nested=True, dpi=150, rankdir='TB')
 dpi = 102
-to_file=f'../InceptionResNetV2 expanded graph {dpi}dpi.jpg'
+_format = 'jpg' # 'svg' # 'png' # 
+to_file=f'../InceptionResNetV2 expanded graph {dpi}dpi.{_format}'
 dot.write(to_file, format='jpg', prog=['dot', f'-Gdpi={dpi}'])
 
 
