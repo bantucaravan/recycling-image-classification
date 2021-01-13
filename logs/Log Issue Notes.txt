@@ -1,0 +1,10 @@
+Log Notes:
+
+* The first couple, I overwrote train_data_gen stuff with the val_data_gen info, so the train_data_gen info is lost
+
+* In 2020-02-07_01h10m05s and 2020-02-07_01h36m15s ( 60 epoch) I hard coded MODEL as 'Lite  Test' and DATA_GEN_CONFIG as 'Baseline Augmentation'
+
+
+* '2020-02-07_11h32m15s' -- wrong opt listed, I ran the key word but did not load the right opt
+
+* continuing training (i.e. warm start) runs have model runn_id of past model as the model name of current run, but OPT will be inaccuracte (as of 02/9/2020)

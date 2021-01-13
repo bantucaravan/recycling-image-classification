@@ -1,14 +1,4 @@
-#*
-#!run_notebooks.py
-#!proj_utils.py
-#!build_data_gens.py
-#!build_models.py
-#!save model summary and graph.py
-#!Base Experiment.ipynb
-#!Viz Data.ipynb
-#!README.md
-#!.gitignore
-
+learning references/
 
 
 
