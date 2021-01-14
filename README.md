@@ -9,7 +9,7 @@ I implemented several simple CNN architectures using increasing an number of fea
 
 This project is an attempt to practice *iterative*, *recorded*, and *reproducible* search for optimal hyper-parameters and architecture.
 
-The [nbrun package]() is used to execute a base experiment notebook with different combinations of parameters specifying the model architecture and other hyper-parameters. Each time an experiment is run a copy of the notebook is saved (as .ipynb and and .html) allowing reproducibility and later reference.
+The [nbrun package](https://github.com/tritemio/nbrun) is used to execute a base experiment notebook with different combinations of parameters specifying the model architecture and other hyper-parameters. Each time an experiment is run a copy of the notebook is saved (as .ipynb and and .html) allowing reproducibility and later reference.
 
 A logging framework is also defined which allows logging of metrics from each experiment as well as specifications of the data generators and models. Combined with saved model weights, the logged specifications allow for reconstruction of the model pipeline to predict on new data in a new python session without re-training the models.
 
@@ -32,14 +32,6 @@ Data is from this kaggle data set: https://www.kaggle.com/asdasdasasdas/garbage-
 
 Data is images of five classes of recyclable material and one category of trash. 
 A high degree of regularity in train images makes these models VERY poor at external generalization, i.e. while the models can accurately detect a image of paper from this dataset, they will do a poor job of identifying any random image of paper from the internet. That is because the images in the data set are all single items on a white background, under consistent lighting, at a uniform distance; random images from the internet will not have those same features.
-
-
-
-
-
-fork nbrun, and add the venv install of the fork into reqs.txt
-
- only push top figs (or all figs??) and saved experiments
 
 
 ### Leaderboard

@@ -6,16 +6,11 @@ import re
 import sys
 import itertools
 
-# location of nbrun_git_clone
-#sys.path.append("/Users/noah.chasek-macfoy@ibm.com/Desktop/projects/Drone proj/code/")
-
-from nbrun_git_clone.nbrun import run_notebook
-
 import build_data_gens
 import build_models
 from noahs_utils import read_log_json
 
-sys.path.append("/Users/noah.chasek-macfoy@ibm.com/Desktop/projects/Noah's Utils [git repo]")
+# this uses nbrun
 from noahs.experiment_tools import run_nb
 
 
