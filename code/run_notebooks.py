@@ -50,22 +50,24 @@ def set_outname(nb_kwargs, pasteps):
     return outname
 
 
-## Execute notebooks
+if __name__ == "__main__":
+    
+    ## Execute notebooks
 
-variants = {
-    'DATA_GEN_CONFIG': ['Baseline Augmentation'], # 'No Augmentation'] # 
-    'MODEL': ['VGG16 Fine-tuning'], # ['VGG16 Fine-tuning', 'Inception-ResNet V2 finetuning final-module', 'Inception-ResNet V2 w. Dropout Model', 'VGG16 Model', 'VGG16 Model flattened', 'Inception-ResNet V2 Model', 'Inception-ResNet V2 flattened', 'Baseline Model', 'Baseline Model + Dropout', 'Lite Test'] # ,
-    'EPOCH': [70, 45, 60],
-    'OPT': ['opt-adam-lr1e-05'], # ['opt-SGD-lr2e-05', 'opt-SGD-lr0.001', 'opt-rmsprop-lr2e-05', 'opt-adam-lr2e-05'] #
-    #'BATCH_SIZE': 84,
-    'AUTO': [True]
-    }
+    variants = {
+        'DATA_GEN_CONFIG': ['Baseline Augmentation'], # 'No Augmentation'] # 
+        'MODEL': ['VGG16 Fine-tuning'], # ['VGG16 Fine-tuning', 'Inception-ResNet V2 finetuning final-module', 'Inception-ResNet V2 w. Dropout Model', 'VGG16 Model', 'VGG16 Model flattened', 'Inception-ResNet V2 Model', 'Inception-ResNet V2 flattened', 'Baseline Model', 'Baseline Model + Dropout', 'Lite Test'] # ,
+        'EPOCH': [70, 45, 60],
+        'OPT': ['opt-adam-lr1e-05'], # ['opt-SGD-lr2e-05', 'opt-SGD-lr0.001', 'opt-rmsprop-lr2e-05', 'opt-adam-lr2e-05'] #
+        #'BATCH_SIZE': 84,
+        'AUTO': [True]
+        }
 
 
-base_nb = 'Base Experiment.ipynb'   
+    base_nb = 'Base Experiment.ipynb'   
 
-run_nb(variants, base_nb, outname_func=set_outname, save_html=True,
-       save_ipynb=True, savedir=savedir)
+    run_nb(variants, base_nb, outname_func=set_outname, save_html=True,
+        save_ipynb=True, savedir=savedir)
 
 
 
